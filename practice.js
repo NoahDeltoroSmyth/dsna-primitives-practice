@@ -21,16 +21,25 @@ console.log(at(['a', 'b', 'c', 'd', 'e'], 1));
 //
 //
 function anagrams(wordOne, wordTwo) {
-  wordOne.split('').sort();
-  // console.log(wordOne.split('').sort());
-  wordTwo.split('').sort();
-  // console.log(wordTwo.split('').sort());
+  const one = wordOne.split('').sort().join('');
+  // console.log(wordOne.split('').sort().join(''));
+  const two = wordTwo.split('').sort().join('');
+  // console.log(wordTwo.split('').sort().join(''));
 
-  if (wordOne === wordTwo) {
-    return 'true';
-  } else {
-    return 'false';
-  }
+  return one === two;
+  // if (one === two) {
+  //   return 'true';
+  // } else {
+  //   return 'false';
+  // }
 }
 console.log(anagrams('superintended', 'unpredestined'));
-// console.log(anagrams('pictorialness', 'documentarily'));
+console.log(anagrams('pictorialness', 'documentarily'));
+
+// function uniqueString(strings) {
+//   const set = new Set(strings);
+//   const unique = [...set];
+//   console.log(unique);
+//   return unique;
+// }
+// console.log(uniqueString(strings));

@@ -9,10 +9,12 @@ function titleCase(sentence) {
 console.log(titleCase('Here is a sentence'));
 //
 //
-// const arr = ['a', 'b', 'c', 'd'];
-// const length = arr.length();
-// function at(arr, index) {
-//   // return arr.find().at(index[1]);
-//   return arr[index] > -1;
-// }
-// console.log(at(arr[1]));
+function at(arr, index) {
+  // if (index > -1) {
+  //   return arr[index];
+  // } else {
+  //   return arr[arr.lenth + index];
+  // }
+  return index > -1 ? arr[index] : arr[arr.length + index];
+}
+console.log(at(['a', 'b', 'c', 'd', 'e'], 1));
